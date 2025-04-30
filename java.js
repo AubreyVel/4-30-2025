@@ -11,6 +11,7 @@ function Customer(name, age, email) {
     this.display = function() {
         return `  ---- ${this.name} ---- ${this.age} ---- ${this.email}`;
     }
+
 }
 
 add.onclick = function() {
@@ -45,7 +46,7 @@ display.onclick = function() {
     let order = 1;
 
     for(let x in customers){
-        htmlcode =+ (order++)+ x.display + "<br>";
+        htmlcode =+ (order++)+ x.display() + "<br>";
 
     }
     list.innerHTML = htmlcode;
